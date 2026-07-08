@@ -71,8 +71,36 @@ export default function Home() {
     }
   }, [currentTagline.length, phase, visibleCharacters]);
 
+  const navItems = ["Experience", "Projects", "Education"];
+
   return (
-    <main className="flex min-h-screen flex-1 items-center justify-center bg-[#111111] px-6 text-white">
+    <main className="relative flex min-h-screen flex-1 items-center justify-center bg-[#111111] px-6 py-28 text-white">
+      <header className="absolute left-0 top-0 flex w-full flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+        <div className="text-lg font-bold tracking-tight">All things Xavier</div>
+
+        <nav className="flex flex-wrap gap-2 sm:justify-end" aria-label="Primary navigation">
+          <ul className="flex flex-wrap gap-2">
+            {navItems.map((item) => (
+              <li key={item}>
+                <button
+                  type="button"
+                  className="rounded-md px-4 py-2 text-sm font-semibold text-zinc-100 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
+                >
+                  {item}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <button
+            type="button"
+            className="rounded-md px-4 py-2 text-sm font-semibold text-zinc-100 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
+          >
+            Contact
+          </button>
+        </nav>
+      </header>
+
       <section className="w-fit max-w-full text-left">
         <h1 className="text-5xl font-black tracking-tight sm:text-7xl md:text-8xl">
           Xavier Callait
