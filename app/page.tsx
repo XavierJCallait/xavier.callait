@@ -6,7 +6,7 @@ import { PROFILE_TAGLINES } from "@/content/profile";
 
 const TYPE_SPEED_MS = 85;
 const DELETE_SPEED_MS = 45;
-const HOLD_COMPLETE_MS = 1000;
+const HOLD_COMPLETE_MS = 2000;
 
 type TypewriterPhase = "typing" | "holding" | "deleting";
 
